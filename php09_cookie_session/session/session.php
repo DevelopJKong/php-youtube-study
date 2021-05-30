@@ -23,6 +23,7 @@
             echo '세션이 등록되어 있지 않습니다.';
         }else{
             echo $_SESSION['city'].'이 등록되어 있습니다';
+            pring_r($_SESSION); //모든 세션의 정보를 연관 배열 형태로 출력
         }
     ?>    
 </body>
