@@ -1,5 +1,7 @@
 <?php 
-
+    session_start(); //세션시작
+    $_SESSION['city'] ='Seoul';
+    $_SESSION['gu'] = 'Jongro';
 
 ?>
 
@@ -15,6 +17,13 @@
     <title>세션</title>
 </head>
 <body>
-    
+    <?php
+        echo '세션이 등록 되었습니다';
+        if(!isset($_SESSION['city'])){
+            echo '세션이 등록되어 있지 않습니다.';
+        }else{
+            echo $_SESSION['city'].'이 등록되어 있습니다';
+        }
+    ?>    
 </body>
 </html>
